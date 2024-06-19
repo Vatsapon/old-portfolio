@@ -2,19 +2,36 @@
 
 body
 {
-	font-family: Roboto, Arial;
+	font-family: Amaranth, Roboto, Arial;
     
 	margin: 0px;
 	padding-top: 150px;
 }
 
-p
+p, span, button
 {
 	margin: 0px;
 	color: white;
+	line-height: 1.5;
 }
 
-.main-header
+.section
+{
+	position: relative;
+	height: 800px;
+}
+
+.p-bold, .p-highlight
+{
+	font-weight: bold;
+}
+
+.p-highlight
+{
+	color: rgb(255, 244, 142);
+}
+
+#main-header
 {
 	display: flex;
 	flex-direction: row;
@@ -24,9 +41,11 @@ p
 	top: 0px;
 	left: 0px;
 	right: 0px;
+	z-index: 100;
 
     height: 150px;
 	
+	letter-spacing: 1.05px;
     background-color: rgb(32, 53, 85);
     color: white;
 }
@@ -47,7 +66,41 @@ p
 	justify-content: flex-end;
 	
 	margin-right: 100px;
-	gap: 20px;
+	gap: 10px;
+}
+
+.main-header-navigation-button
+{
+	background-color: transparent;
+	border-radius: 50px;
+	color: white;
+	text-decoration: none;
+	
+	font-size: 18px;
+	font-weight: bold;
+	padding: 15px 20px;
+	
+	scale: 1;
+	
+	transition: all 0.2s ease;
+}
+
+.main-header-navigation-button:hover
+{
+	background-color: rgb(255, 244, 142);
+	color: rgb(32, 53, 85);
+	
+	scale: 1.1;
+	
+	transition: all 0.2s ease;
+}
+
+.main-header-navigation-button:active
+{
+	background-color: rgb(255, 191, 0);
+	scale: 0.9;
+	
+	transition: all 0.2s ease;
 }
 
 .main-footer
@@ -105,18 +158,24 @@ p
 
 .section-split-left
 {
+	position: absolute;
+
 	height: 100px;
-	margin-top: -100px;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	
 	background: linear-gradient(to bottom left, transparent 0%, transparent 50%, black 50%, black 100%);
 }
 
 .section-split-right
 {
+	position: absolute;
+	
 	height: 100px;
-	margin-top: -100px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
 	
 	background: linear-gradient(to bottom right, transparent 0%, transparent 50%, black 50%, black 100%);
 }
-
-@media ()

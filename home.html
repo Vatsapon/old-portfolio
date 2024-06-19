@@ -4,82 +4,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+	
     <title>Vatsapon Asawakittiporn | Portfolio</title>
-    
+	<link rel="icon" type="image/x-icon" href="images/favicon.png">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth">
     <link rel="stylesheet" href="styles/general.css">
 	<link rel="stylesheet" href="styles/homepage.css">
+	
+	<script src="scripts/general.js"></script>
 </head>
 <body>
 	<!-- Header Section -->
 	
-    <div class="main-header">
+    <div id="main-header">
 		<div class="main-header-name">
-			<p>Vatsapon Asawakittiporn</p>
-			<p>Game Developer / Programmer</p>
+			<p class="p-highlight" style="font-size: 27px">VATSAPON ASAWAKITTIPORN</p>
+			<p style="font-size: 24px">Game Developer / Programmer</p>
 		</div>
 		<div class="main-header-navigation">
-			<button>Home</button>
-			<button>Project</button>
-			<button>About</button>
-			<button>Resume</button>
+			<a href="home.html" class="main-header-navigation-button">HOME</a>
+			<a href="project.html" class="main-header-navigation-button">PROJECTS</a>
+			<a href="about.html" class="main-header-navigation-button">ABOUT</a>
+			<a href="https://drive.google.com/file/d/1GojvCwZEUEFXQjEGFkxs2UiNSt_9K7im/view?usp=sharing" target="_blank" class="main-header-navigation-button">RESUME</a>
 		</div>
     </div>
 	
 	<!-- Intro Section -->
 	
-	<div class="intro-section">
-		<p>HEY THERE! MY NAME IS</p>
-		<p>VATSAPON ASAWAKITTIPORN</p>
-		<div class="intro-role">
-			GAME DEVELOPER / PROGRAMMER
+	<div class="section">
+		<video autoplay muted loop class="intro-section-video">
+			<source src="videos/home-bg.mp4" type="video/mp4">
+		</video>
+			
+		<div class="intro-section-content">
+			<p>
+				<span class="p-bold" style="font-size: 1.75vw">HEY THERE!</span>
+				<span style="font-size: 1.5vw">MY NAME IS</span>
+			</p>
+			<p class="p-highlight" style="font-size: 3vw">VATSAPON ASAWAKITTIPORN</p>
+			<div class="intro-role">
+				GAME DEVELOPER / PROGRAMMER
+			</div>
+			<p style="width: 55%; font-size: 1.2vw;">I'm a Game Developer / Programmer with strong programming and scripting skills. I am interested in taking on challenging projects that involve new genres, styles, and types of work that I have never worked on yet.</p>
 		</div>
-		<p>I'm a Game Developer / Programmer with strong programming and scripting skills. I am interested in taking on challenging projects that involve new genres, styles, and types of work that I have never worked on yet.</p>
-		
+			
+		<div class="section-split-right" style="
+			background: linear-gradient(to bottom right, transparent 0%, transparent 50%, rgb(18, 14, 25) 50%, rgb(18, 14, 25) 100%);"></div>
+		</div>
 	</div>
-	<div class="section-split-right"></div>
 	
 	<!-- Project Section -->
 	
-	<div class="project-section">
-		<p>Personal / Academic Projects</p>
+	<div class="section project-section">
+		<p class="p-highlight" style="font-size: 2.2vw">Personal / Academic Projects</p>
 		<div class="project-grid">
-			<div class="project-grid-container">
-				<p>Merrit</p>
-			</div>
+			<a href="merrit.html" class="project-grid-container">
+				<img class="project-grid-container-content-preview" src="videos/projects/merrit/merrit-poster-preview.gif"></img>
+				<img class="project-grid-container-content" src="videos/projects/merrit/merrit-poster.png"></img>
+			</a>
 			
-			<div class="project-grid-container">
-				<p>Merrit</p>
-			</div>
+			<a href="lilyparty.html" class="project-grid-container">
+				<img class="project-grid-container-content-preview" src="videos/projects/lilyparty/lilyparty-poster-preview.gif"></img>
+				<img class="project-grid-container-content" src="videos/projects/lilyparty/lilyparty-poster.png"></img>
+			</a>
 			
-			<div class="project-grid-container">
-				<p>Merrit</p>
-			</div>
+			<a href="finalfrontier.html" class="project-grid-container">
+				<img class="project-grid-container-content-preview" src="videos/projects/finalfrontier/finalfrontier-poster-preview.gif"></img>
+				<img class="project-grid-container-content" src="videos/projects/finalfrontier/finalfrontier-poster.png"></img>
+			</a>
 			
-			<div class="project-grid-container">
-				<p>Merrit</p>
-			</div>
+			<a href="mythicallove.html" class="project-grid-container">
+				<img class="project-grid-container-content-preview" src="videos/projects/mythicallove/mythicallove-poster-preview.gif"></img>
+				<img class="project-grid-container-content" src="videos/projects/mythicallove/mythicallove-poster.png"></img>
+			</a>
 			
-			<div class="project-grid-container">
-				<p>Merrit</p>
-			</div>
+			<a href="slimejourney.html" class="project-grid-container">
+				<img class="project-grid-container-content-preview" src="videos/projects/slimejourney/slimejourney-poster-preview.gif"></img>
+				<img class="project-grid-container-content" src="videos/projects/slimejourney/slimejourney-poster.png"></img>
+			</a>
 			
-			<div class="project-grid-container">
-				<p>Merrit</p>
-			</div>
+			<a href="grotto.html" class="project-grid-container">
+				<img class="project-grid-container-content-preview" src="videos/projects/grotto/grotto-poster-preview.gif"></img>
+				<img class="project-grid-container-content" src="videos/projects/grotto/grotto-poster.png"></img>
+			</a>
+		</div>
+		
+		<div class="section-split-left" style="
+			background: linear-gradient(to bottom left, transparent 0%, transparent 50%, rgb(64, 0, 0) 50%, rgb(64, 0, 0) 100%);"></div>
 		</div>
 	</div>
 	
-	<div class="section-split-left" style="
-			background: linear-gradient(to bottom left, transparent 0%, transparent 50%, red 50%, red 100%);"></div>
-	
-	<div class="project-section" style="
-			background-color: red;">
-		<p>Professional Projects</p>
+	<div class="section project-section" style="
+			background-image: linear-gradient(rgb(64, 0, 0), rgb(10, 24, 46));">
+		<p class="p-highlight" style="font-size: 2.2vw">Professional Projects</p>
 		<div class="project-grid">
-			<div class="project-grid-container">
-				<p>Lost & Found Co.</p>
-			</div>
+			<a href="lostNfound.html" class="project-grid-container">
+				<img class="project-grid-container-content-preview" src="videos/projects/lostNfound/lostNfound-poster-preview.gif"></img>
+				<img class="project-grid-container-content" src="videos/projects/lostNfound/lostNfound-poster.png"></img>
+			</a>
 		</div>
 	</div>
 	
