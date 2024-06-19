@@ -5,7 +5,6 @@ body
 	font-family: Amaranth, Roboto, Arial;
     
 	margin: 0px;
-	padding-top: 150px;
 }
 
 p, span, button
@@ -48,6 +47,8 @@ p, span, button
 	letter-spacing: 1.05px;
     background-color: rgb(32, 53, 85);
     color: white;
+	
+	transition: all 0.3s ease;
 }
 
 .main-header-name
@@ -139,11 +140,22 @@ p, span, button
 {
 	width: 40px;
 	height: 40px;
+	
+	transition: 0.3s ease;
 }
 
 .main-footer-link-icon:hover
 {
 	cursor: pointer;
+	
+	scale: 1.1;
+	transition: 0.3s ease;
+}
+
+.main-footer-link-icon:active
+{
+	scale: 0.9;
+	transition: 0.3s ease;
 }
 
 .main-footer-copyright

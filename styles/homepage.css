@@ -1,4 +1,4 @@
-﻿.intro-section-video
+﻿#intro-section-video
 {
 	position: fixed;
 	
@@ -6,6 +6,9 @@
 	height: 100%;
 	object-fit: cover;
 	z-index: -1;
+	
+	transform: translateZ(-1px);
+	perspective: 1px;
 }
 
 .intro-section-content
