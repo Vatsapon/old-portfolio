@@ -1,6 +1,6 @@
 ﻿/* Main Page Element */
 
-body
+html, body
 {
 	font-family: Amaranth, Roboto, Arial;
     
@@ -32,11 +32,12 @@ p, span, button
 
 #main-header
 {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	
 	position: fixed;
+	
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
 	top: 0px;
 	left: 0px;
 	right: 0px;
@@ -63,7 +64,6 @@ p, span, button
 	flex : 1;
 	
 	display: flex;
-	flex-direction: row;
 	justify-content: flex-end;
 	
 	margin-right: 100px;
@@ -72,6 +72,8 @@ p, span, button
 
 .main-header-navigation-button
 {
+	position: relative;
+	
 	background-color: transparent;
 	border-radius: 50px;
 	color: white;
@@ -88,6 +90,8 @@ p, span, button
 
 .main-header-navigation-button:hover
 {
+	cursor: pointer;
+	
 	background-color: rgb(255, 244, 142);
 	color: rgb(32, 53, 85);
 	
@@ -104,6 +108,17 @@ p, span, button
 	transition: all 0.2s ease;
 }
 
+.dropdown
+{
+	height: 0px;
+}
+
+
+.content
+{
+	
+}
+
 .main-footer
 {
 	display: flex;
@@ -114,7 +129,12 @@ p, span, button
     height: 100px;
 	
     background-color: rgb(32, 53, 85);
+	font-size: 20px;
     color: white;
+	
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .main-footer-contact
@@ -133,13 +153,15 @@ p, span, button
 	align-items: center;
 	justify-content: center;
 	
+	letter-spacing: 1.05px;
+	
 	gap: 20px;
 }
 
 .main-footer-link-icon
 {
-	width: 40px;
-	height: 40px;
+	width: 45px;
+	height: 45px;
 	
 	transition: 0.3s ease;
 }

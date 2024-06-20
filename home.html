@@ -22,7 +22,9 @@
 		</div>
 		<div class="main-header-navigation">
 			<a href="home.html" class="main-header-navigation-button">HOME</a>
-			<a href="project.html" class="main-header-navigation-button">PROJECTS</a>
+			<div class="dropdown">
+				<a class="main-header-navigation-button">PROJECTS</a>
+			</div>
 			<a href="about.html" class="main-header-navigation-button">ABOUT</a>
 			<a href="https://drive.google.com/file/d/1GojvCwZEUEFXQjEGFkxs2UiNSt_9K7im/view?usp=sharing" target="_blank" class="main-header-navigation-button">RESUME</a>
 		</div>
@@ -34,7 +36,7 @@
 		<video id="intro-section-video" autoplay muted loop>
 			<source src="videos/home-bg.mp4" type="video/mp4">
 		</video>
-			
+		
 		<div class="intro-section-content">
 			<p>
 				<span class="p-bold" style="font-size: 1.75vw">HEY THERE!</span>
@@ -56,37 +58,7 @@
 	
 	<div class="section project-section">
 		<p class="p-highlight" style="font-size: 2.2vw">Personal / Academic Projects</p>
-		<div class="project-grid">
-			<a href="merrit.html" class="project-grid-container">
-				<img class="project-grid-container-content-preview" src="videos/projects/merrit/merrit-poster-preview.gif"></img>
-				<img class="project-grid-container-content" src="videos/projects/merrit/merrit-poster.png"></img>
-			</a>
-			
-			<a href="lilyparty.html" class="project-grid-container">
-				<img class="project-grid-container-content-preview" src="videos/projects/lilyparty/lilyparty-poster-preview.gif"></img>
-				<img class="project-grid-container-content" src="videos/projects/lilyparty/lilyparty-poster.png"></img>
-			</a>
-			
-			<a href="finalfrontier.html" class="project-grid-container">
-				<img class="project-grid-container-content-preview" src="videos/projects/finalfrontier/finalfrontier-poster-preview.gif"></img>
-				<img class="project-grid-container-content" src="videos/projects/finalfrontier/finalfrontier-poster.png"></img>
-			</a>
-			
-			<a href="mythicallove.html" class="project-grid-container">
-				<img class="project-grid-container-content-preview" src="videos/projects/mythicallove/mythicallove-poster-preview.gif"></img>
-				<img class="project-grid-container-content" src="videos/projects/mythicallove/mythicallove-poster.png"></img>
-			</a>
-			
-			<a href="slimejourney.html" class="project-grid-container">
-				<img class="project-grid-container-content-preview" src="videos/projects/slimejourney/slimejourney-poster-preview.gif"></img>
-				<img class="project-grid-container-content" src="videos/projects/slimejourney/slimejourney-poster.png"></img>
-			</a>
-			
-			<a href="grotto.html" class="project-grid-container">
-				<img class="project-grid-container-content-preview" src="videos/projects/grotto/grotto-poster-preview.gif"></img>
-				<img class="project-grid-container-content" src="videos/projects/grotto/grotto-poster.png"></img>
-			</a>
-		</div>
+		<div class="project-grid js-project-grid-personal"></div>
 		
 		<div class="section-split-left" style="
 			background: linear-gradient(to bottom left, transparent 0%, transparent 50%, rgb(64, 0, 0) 50%, rgb(64, 0, 0) 100%);"></div>
@@ -96,19 +68,14 @@
 	<div class="section project-section" style="
 			background-image: linear-gradient(rgb(64, 0, 0), rgb(10, 24, 46));">
 		<p class="p-highlight" style="font-size: 2.2vw">Professional Projects</p>
-		<div class="project-grid">
-			<a href="lostNfound.html" class="project-grid-container">
-				<img class="project-grid-container-content-preview" src="videos/projects/lostNfound/lostNfound-poster-preview.gif"></img>
-				<img class="project-grid-container-content" src="videos/projects/lostNfound/lostNfound-poster.png"></img>
-			</a>
-		</div>
+		<div class="project-grid js-project-grid-professional"></div>
 	</div>
 	
 	<!-- Footer Section -->
 	
 	<div class="main-footer">
 		<div class="main-footer-contact">
-			<p>Contact</p>
+			<p class="p-highlight">Contact</p>
 			<p>(+66) 83-292-2652</p>
 		</div>
 		<div class="main-footer-link">
@@ -116,11 +83,12 @@
 			<a href="https://www.linkedin.com/in/vatsapon/" target="_blank"><img class="main-footer-link-icon" src="images/linkedin-icon.webp"></img></a>
 		</div>
 		<div class="main-footer-copyright">
-			<p>&#169; 2023 by Vatsapon Asawakittiporn</p>
+			<p class="p-highlight">&#169; 2023 by Vatsapon Asawakittiporn</p>
 			<p>Host provided by GitHub pages</p>
 		</div>
 	</div>
 	
 	<script src="scripts/general.js"></script>
+	<script src="scripts/projects/home-project.js"></script>
 </body>
 </html>
