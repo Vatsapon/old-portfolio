@@ -30,7 +30,7 @@ p, span, button
 	color: rgb(255, 244, 142);
 }
 
-#main-header
+#header
 {
 	position: fixed;
 	
@@ -49,17 +49,20 @@ p, span, button
     background-color: rgb(32, 53, 85);
     color: white;
 	
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	
 	transition: all 0.3s ease;
 }
 
-.main-header-name
+#header-name
 {
 	flex: 1;
 	
 	margin-left: 100px;
 }
 
-.main-header-navigation
+#header-nav
 {
 	flex : 1;
 	
@@ -70,9 +73,9 @@ p, span, button
 	gap: 10px;
 }
 
-.main-header-navigation-button
+.header-nav-btn
 {
-	position: relative;
+	display: block;
 	
 	background-color: transparent;
 	border-radius: 50px;
@@ -88,7 +91,7 @@ p, span, button
 	transition: all 0.2s ease;
 }
 
-.main-header-navigation-button:hover
+.header-nav-btn:hover
 {
 	cursor: pointer;
 	
@@ -100,7 +103,7 @@ p, span, button
 	transition: all 0.2s ease;
 }
 
-.main-header-navigation-button:active
+.header-nav-btn:active
 {
 	background-color: rgb(255, 191, 0);
 	scale: 0.9;
@@ -108,15 +111,67 @@ p, span, button
 	transition: all 0.2s ease;
 }
 
-.dropdown
+.navigation
 {
-	height: 0px;
+	border-radius: 25px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
 }
 
-
-.content
+.navigation:hover
 {
+	scale: 1;
+}
+
+.dropdown
+{
+	position: relative;
+}
+
+.dropdown-content
+{
+	opacity: 0;
+	border-top-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+	display: none;
+	position: absolute;
+	left: 0;
+	background-color: rgb(255, 244, 142);
+	min-width: 160px;
+	z-index: 100;
+
+	transition: all 0.2s ease;
+}
+
+.dropdown-content a
+{
+	display: block;
+	float: none;
+	color: black;
+	padding: 10px 12px;
+	text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content
+{
+	display: block;
+	opacity: 1;
 	
+	transition: all 0.2s ease;
+}
+
+.dropdown-obj
+{
+	font-weight: bold;
+	transition: all 0.2s ease;
+}
+
+.dropdown-obj:hover
+{
+	cursor: pointer;
+	font-size: 115%;
+	transition: all 0.2s ease;
 }
 
 .main-footer
