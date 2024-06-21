@@ -1,9 +1,14 @@
 ﻿/* Main Page Element */
 
+:root
+{
+	--baseColor: #203555;
+	--highlightColor: #fff48e;
+}
+
 html, body
 {
 	font-family: Amaranth, Roboto, Arial;
-    
 	margin: 0px;
 }
 
@@ -27,7 +32,7 @@ p, span, button
 
 .p-highlight
 {
-	color: rgb(255, 244, 142);
+	color: var(--highlightColor);
 }
 
 #header
@@ -46,7 +51,7 @@ p, span, button
     height: 150px;
 	
 	letter-spacing: 1.05px;
-    background-color: rgb(32, 53, 85);
+    background-color: var(--baseColor);
     color: white;
 	
 	white-space: nowrap;
@@ -95,7 +100,7 @@ p, span, button
 {
 	cursor: pointer;
 	
-	background-color: rgb(255, 244, 142);
+	background-color: var(--highlightColor);
 	color: rgb(32, 53, 85);
 	
 	scale: 1.1;
@@ -111,70 +116,78 @@ p, span, button
 	transition: all 0.2s ease;
 }
 
-.navigation
+#proj
 {
 	border-radius: 25px;
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
 }
 
-.navigation:hover
+#proj:hover
 {
 	scale: 1;
 }
 
-.dropdown
+#header-nav-proj
 {
 	position: relative;
 }
 
-.dropdown-content
+#proj-content
 {
-	opacity: 0;
+	pointer-events: none;
+	
+	position: absolute;
+	display: block;
+
+	min-width: 160px;
+
+	left: 0;
 	border-top-right-radius: 25px;
 	border-bottom-left-radius: 25px;
 	border-bottom-right-radius: 25px;
-	display: none;
-	position: absolute;
-	left: 0;
-	background-color: rgb(255, 244, 142);
-	min-width: 160px;
-	z-index: 100;
+
+	opacity: 0;
+	background-color: var(--highlightColor);
 
 	transition: all 0.2s ease;
 }
 
-.dropdown-content a
+#proj-content a
 {
 	display: block;
 	float: none;
-	color: black;
-	padding: 10px 12px;
+	
+	padding: 10px;
+	
+	color: var(--baseColor);
 	text-decoration: none;
 }
 
-.dropdown:hover .dropdown-content
+#header-nav-proj:hover #proj-content
 {
-	display: block;
+	pointer-events: auto;
 	opacity: 1;
 	
 	transition: all 0.2s ease;
 }
 
-.dropdown-obj
+.proj-item
 {
 	font-weight: bold;
+	padding: 10px 12px;
+
 	transition: all 0.2s ease;
 }
 
-.dropdown-obj:hover
+.proj-item:hover
 {
 	cursor: pointer;
 	font-size: 115%;
 	transition: all 0.2s ease;
 }
 
-.main-footer
+#footer
 {
 	display: flex;
 	flex-direction: row;
@@ -183,7 +196,7 @@ p, span, button
 	
     height: 100px;
 	
-    background-color: rgb(32, 53, 85);
+    background-color: var(--baseColor);
 	font-size: 20px;
     color: white;
 	
@@ -192,14 +205,14 @@ p, span, button
 	text-overflow: ellipsis;
 }
 
-.main-footer-contact
+#footer-contact
 {
 	flex: 1;
 	
 	margin-left: 100px;
 }
 
-.main-footer-link
+#footer-link
 {
 	flex : 1;
 	
@@ -213,7 +226,7 @@ p, span, button
 	gap: 20px;
 }
 
-.main-footer-link-icon
+.footer-link-icon
 {
 	width: 45px;
 	height: 45px;
@@ -221,7 +234,7 @@ p, span, button
 	transition: 0.3s ease;
 }
 
-.main-footer-link-icon:hover
+.footer-link-icon:hover
 {
 	cursor: pointer;
 	
@@ -229,13 +242,13 @@ p, span, button
 	transition: 0.3s ease;
 }
 
-.main-footer-link-icon:active
+.footer-link-icon:active
 {
 	scale: 0.9;
 	transition: 0.3s ease;
 }
 
-.main-footer-copyright
+#footer-copyright
 {
 	flex : 1;
 	
