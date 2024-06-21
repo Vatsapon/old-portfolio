@@ -101,7 +101,7 @@ p, span, button
 	cursor: pointer;
 	
 	background-color: var(--highlightColor);
-	color: rgb(32, 53, 85);
+	color: var(--baseColor);
 	
 	scale: 1.1;
 	
@@ -123,14 +123,17 @@ p, span, button
 	border-bottom-right-radius: 0px;
 }
 
-#proj:hover
-{
-	scale: 1;
-}
-
 #header-nav-proj
 {
 	position: relative;
+}
+
+#header-nav-proj:hover .header-nav-btn
+{
+	background-color: var(--highlightColor);
+	color: var(--baseColor);
+	
+	scale: 1;
 }
 
 #proj-content
@@ -175,7 +178,6 @@ p, span, button
 .proj-item
 {
 	font-weight: bold;
-	padding: 10px 12px;
 
 	transition: all 0.2s ease;
 }
@@ -258,7 +260,7 @@ p, span, button
 
 /* Extra Page Element */
 
-.section-split-left
+.section-split-left, .section-split-right
 {
 	position: absolute;
 
@@ -266,18 +268,14 @@ p, span, button
 	left: 0;
 	right: 0;
 	bottom: 0;
-	
+}
+
+.section-split-left
+{
 	background: linear-gradient(to bottom left, transparent 0%, transparent 50%, black 50%, black 100%);
 }
 
 .section-split-right
 {
-	position: absolute;
-	
-	height: 100px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-	
 	background: linear-gradient(to bottom right, transparent 0%, transparent 50%, black 50%, black 100%);
 }

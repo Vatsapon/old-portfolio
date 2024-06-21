@@ -1,14 +1,9 @@
-const personalProjectInfo = ['merrit', 'lilyParty', 'finalFrontier', 'mythicalLove', 'slimeJourney', 'grotto'];
-const professionalProjectInfo = ['lostNfound'];
-
-// Main Execution
-
-loadProjectInfo(personalProjectInfo, '.js-project-grid-personal');
-loadProjectInfo(professionalProjectInfo, '.js-project-grid-professional');
+export const personalProjectInfo = ['merrit', 'lilyParty', 'finalFrontier', 'mythicalLove', 'slimeJourney', 'grotto'];
+export const professionalProjectInfo = ['lostNfound'];
 
 // Functions
 
-function loadProjectInfo(infoArray, queryName) {
+export function loadProjectInfo(infoArray, queryName) {
 	let projectHTML = '';
 
 	infoArray.forEach((project) => {
