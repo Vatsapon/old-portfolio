@@ -1,28 +1,27 @@
-import * as homeProject from '../datas/home-project.js';
-
-var prevScrollpos = window.pageYOffset;
 const parallaxForce = 0.5;
 
 // Load Project data
-homeProject.loadProjectInfo(homeProject.personalProjectInfo, '.js-project-grid-personal');
-homeProject.loadProjectInfo(homeProject.professionalProjectInfo, '.js-project-grid-professional');
+loadProjectInfo(personalProjectInfo, '.js-project-grid-personal');
+loadProjectInfo(professionalProjectInfo, '.js-project-grid-professional');
+
+let homePrevScroll = window.scrollY;
 
 // Parallax video background
 window.addEventListener('scroll', () => {
-	const currentScrollPos = window.pageYOffset;
+	const currentScrollPos = window.scrollY;
 	
 	const introElement = document.getElementById('intro-section-video');
 	const introTop = currentScrollPos * parallaxForce;
 	
 	// Scroll up.
-	if (prevScrollpos > currentScrollPos) {
+	if (homePrevScroll > currentScrollPos) {
 		introElement.style.top = `${introTop}px`;
 	}
 	
 	// Scroll down.
-	if (prevScrollpos < currentScrollPos) {
+	if (homePrevScroll < currentScrollPos) {
 		introElement.style.top = `${introTop}px`;
 	}
 	
-	prevScrollpos = currentScrollPos;
+	homepagePrevScroll = currentScrollPos;
 });

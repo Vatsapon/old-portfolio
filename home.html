@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
     <title>Vatsapon Asawakittiporn | Portfolio</title>
 	<link rel="icon" type="image/x-icon" href="images/favicon.png">
@@ -16,13 +15,28 @@
 <body>
 	<!-- Header Section -->
 	
-    <div id="header"></div>
+    <div id="header">
+		<div id="header-container" class="header">
+			<div id="header-title">
+				<p class="p-highlight" style="font-size: 100%">VATSAPON ASAWAKITTIPORN</p>
+				<p style="font-size: 75%">Game Developer / Programmer</p>
+			</div>
+			<input id="header-menu" type="checkbox">
+			<label class="hamb" for="header-menu">
+				<span class="hamb-line"></span>
+			</label>
+		</div>
+		<div class="header" style="
+			position: relative;
+			width: 100%;">
+		</div>
+	</div>
 	
 	<!-- Intro Section -->
 	
 	<div class="section" style="height: 1000px;">
 		<video id="intro-section-video" autoplay muted loop>
-			<source src="videos/home-bg.mp4" type="video/mp4">
+			<source src="videos/home-bg.mp4" alt="Video" type="video/mp4">
 		</video>
 		
 		<div class="intro-section-content">
@@ -61,9 +75,14 @@
 	
 	<!-- Footer Section -->
 	
+	<button id="scroll-to-top" class="btn scroll-to-top-hide" onclick="scrollToTop()">
+		&#128897; Scroll to Top
+	</button>
+	
 	<div id="footer"></div>
 	
 	<script src="scripts/general.js"></script>
+	<script src="datas/home-project.js"></script>
 	<script src="scripts/homepage.js"></script>
 </body>
 </html>
