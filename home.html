@@ -15,21 +15,37 @@
 <body>
 	<!-- Header Section -->
 	
-    <div id="header">
-		<div id="header-container" class="header">
-			<div id="header-title">
-				<p class="p-highlight" style="font-size: 100%">VATSAPON ASAWAKITTIPORN</p>
-				<p style="font-size: 75%">Game Developer / Programmer</p>
-			</div>
-			<input id="header-menu" type="checkbox">
-			<label class="hamb" for="header-menu">
-				<span class="hamb-line"></span>
-			</label>
+    <header id="header">
+		<div id="header-title">
+			<p class="p-highlight" style="font-size: 100%">VATSAPON ASAWAKITTIPORN</p>
+			<p style="font-size: 75%">Game Developer / Programmer</p>
 		</div>
-		<div class="header" style="
-			position: relative;
-			width: 100%;">
-		</div>
+		
+		<input id="header-side-menu" type="checkbox">
+		<label id="header-hamb" for="header-side-menu">
+			<span class="header-hamb-line"></span>
+		</label>
+		
+		<nav id="header-nav">
+			<ul id="header-menu">
+				<li><a href="home.html">HOME</a></li>
+				<li class="subnav">
+					<p class="subnavbtn">PROJECTS</p>
+					<div class="subnav-content">
+						<a href="#">Merrit</a>
+						<a href="#">Lily Party</a>
+						<a href="#">Final Frontier</a>
+					</div>
+				</li>
+				<li><a href="about.html">ABOUT</a></li>
+				<li><a href="https://drive.google.com/file/d/1GojvCwZEUEFXQjEGFkxs2UiNSt_9K7im/view?usp=sharing" target="_blank">RESUME</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div class="header" style="
+		position: relative;
+		width: 100%;">
 	</div>
 	
 	<!-- Intro Section -->

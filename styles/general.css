@@ -35,6 +35,11 @@ p, span, button
 	line-height: 1.5;
 }
 
+ul
+{
+	list-style: none;
+}
+
 button
 {
 	border-width: 0px;
@@ -75,57 +80,72 @@ button
 	transition: all 0.2s ease;
 }
 
-.header
-{
-	height: 10vw;
-}
-
-#header-container
+#header
 {
 	position: fixed;
-	
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	z-index: 100;
 	
 	top: 0px;
-	left: 0px;
-	right: 0px;
-	z-index: 100;
+	height: 8vw;
+	width: 100%;
 	
 	letter-spacing: 1.05px;
     background-color: var(--base-color);
     color: white;
-	
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	
-	transition: all 0.3s ease;
 }
 
 #header-title
 {
-	flex: 1;
+	position: absolute;
+	margin: auto;
 	
-	margin-left: 5vw;
+	top: 0;
+	bottom: 0;
+	left: 5vw;
 
 	font-size: 2vw;
+	color: white;
 }
 
-#header-menu
+#header-menu a, .subnav .subnavbtn
 {
-	display: none;
+    display: block;
+    padding: 30px;
+    color: white;
 }
 
-.hamb
+#header-nav
+{
+	position: fixed;
+	overflow: hidden;
+	
+    width: 100%;
+	height: 100%;
+	top: 100px;
+    
+    background-color: black;
+}
+
+#header-nav
+{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+#header-hamb
 {
 	cursor: pointer;
     float: right;
+	
     padding: 40px 20px;
 	margin-right: 5vw;
+	
+	font-size: 2.5vw;
+	z-index: 200;
 }
 
-.hamb-line {
+.header-hamb-line
+{
     position: relative;
 	display: block;
 	
@@ -135,7 +155,8 @@ button
     background: white;
 }
 
-.hamb-line::before, .hamb-line::after {
+.header-hamb-line::before, .header-hamb-line::after
+{
     display: block;
 
     width: 100%;
@@ -148,30 +169,50 @@ button
     transition: all 0.2s ease-out;
 }
 
-.hamb-line::before {
+.header-hamb-line::before
+{
     top: 7px;
 }
 
-.hamb-line::after {
+.header-hamb-line::after
+{
     top: -7px;
 }
 
-#header-nav
+#header-side-menu
 {
-	font-size: 2.5vw;
-	margin-right: 5vw;
+	display: none;
 }
 
-#header-nav-flex
+#header-side-menu:checked ~ nav
 {
-	flex : 1;
-	
-	display: flex;
-	justify-content: flex-end;
-	
-	margin-right: 5vw;
-	gap: 10px;
+    max-height: 100%;
 }
+
+#header-side-menu:checked ~ #header-hamb .header-hamb-line
+{
+    background: transparent;
+}
+
+#header-side-menu:checked ~ #header-hamb .header-hamb-line::before
+{
+    top: 0;
+	transform: rotate(-45deg);
+}
+
+#header-side-menu:checked ~ #header-hamb .header-hamb-line::after
+{
+	top: 0;
+    transform: rotate(45deg);
+}
+
+body:has(#header-side-menu:checked)
+{
+	overflow: hidden;
+}
+
+
+
 
 .header-nav-btn
 {
@@ -227,61 +268,25 @@ button
 	background-color: var(--highlight-color);
 }
 
-#proj-content
+.subnav-content
 {
-	pointer-events: none;
-	
-	position: absolute;
-	display: block;
-
-	min-width: 160px;
-
-	left: 0;
-	padding: 10px;
-	border-top-right-radius: 10px;
-	border-bottom-left-radius: 1em;
-	border-bottom-right-radius: 1em;
-
-	font-size: 1.25vw;
-
-	opacity: 0;
-	background-color: var(--highlight-color);
-
-	transition: all 0.2s ease;
+    background-color: var(--base-color);
+    width: 100%;
+    padding: 20px 0px;
+    display: none;
 }
 
-#proj-content a
+.subnav-content a
 {
-	display: block;
-	float: none;
+    color: black;
+    text-decoration: none;
+    padding: 0;
+    margin: 10px 0;
 	
-	padding: 10px;
-	
-	color: var(--base-color);
-	text-decoration: none;
 }
 
-#header-nav-proj:hover #proj-content
-{
-	pointer-events: auto;
-	opacity: 1;
-	
-	transition: all 0.2s ease;
-}
-
-.proj-item
-{
-	font-weight: bold;
-
-	transition: all 0.2s ease;
-}
-
-.proj-item:hover
-{
-	cursor: pointer;
-	font-size: 115%;
-
-	transition: all 0.2s ease;
+.subnav:hover .subnav-content {
+    display: block;
 }
 
 #footer
@@ -391,6 +396,43 @@ button
 	background: linear-gradient(to bottom right, transparent 0%, transparent 50%, black 50%, black 100%);
 }
 
+@media (min-width: 768px)
+{
+    #header-nav
+	{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+    }
+	
+    #header-menu li
+	{
+        float: left;
+    }
+
+    #header-hamb
+	{
+        display: none;
+    }
+
+	#header-nav
+	{
+		top: 0;
+		overflow: visible;
+	}
+	
+	.subnav-content {
+        padding: 20px 0 ;
+        display: none;
+        background-color: var(--base-color);
+    }
+    .subnav-content a {
+        color: white;
+    }
+}
+
 @media (max-width: 900px)
 {
 	.header
@@ -411,4 +453,20 @@ button
     100% {
         opacity: 1;
     }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the menu items */
+#header-side-menu:checked~nav #header-menu li {
+  animation: slideIn 0.5s forwards;
 }
