@@ -59,7 +59,7 @@ let generalPrevScroll = window.scrollY;
 window.addEventListener('scroll', () => {
 	const currentScrollPos = window.scrollY;
 	
-	const headerElement = document.getElementById('header-container');
+	const headerElement = document.getElementById('header');
 	const headerHeightString = getComputedStyle(headerElement).height;
 	const headerHeight = parseInt(headerHeightString, 10);
 	
