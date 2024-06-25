@@ -1,43 +1,36 @@
-
-// Setup layout based on device's browser
-
-if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-	loadMobile();
-} else {
-	loadDesktop();
-}
-
 // Initialization Header/Footer
 
-/*
 document.getElementById("header").innerHTML =
-	`<div id="header-container" class="header">
-		<div id="header-title">
-			<p class="p-highlight" style="font-size: 100%">VATSAPON ASAWAKITTIPORN</p>
-			<p style="font-size: 75%">Game Developer / Programmer</p>
-		</div>
-		<div id="header-nav">
-			<a href="home.html" class="header-nav-btn btn">HOME</a>
-			<div id="header-nav-proj">
-				<a id="proj" class="header-nav-btn btn">PROJECTS &#128899;</a>
-				<div id="proj-content">
-					<a class="proj-item btn">Merrit</a>
-					<a class="proj-item btn">Lily Party</a>
-					<a class="proj-item btn">Final Frontier</a>
-					<a class="proj-item btn">Mythical Love</a>
-					<a class="proj-item btn">Slime Journey</a>
-					<a class="proj-item btn">Lost & Found Co.</a>
-				</div>
-			</div>
-			<a href="about.html" class="header-nav-btn btn">ABOUT</a>
-			<a href="https://drive.google.com/file/d/1GojvCwZEUEFXQjEGFkxs2UiNSt_9K7im/view?usp=sharing" target="_blank" class="header-nav-btn btn">RESUME</a>
-		</div>
+	`<div id="header-title">
+		<p class="p-highlight">VATSAPON ASAWAKITTIPORN</p>
+		<p style="font-size: 80%">Game Developer / Programmer</p>
 	</div>
-	<div class="header" style="
-		position: relative;
-		width: 100px;">
-	</div>`;
-	*/
+	
+	<input id="header-side-menu" type="checkbox">
+	<label id="header-hamb" for="header-side-menu">
+		<span class="header-hamb-line"></span>
+	</label>
+	
+	<nav id="header-nav">
+		<ul id="header-menu">
+			<li><a href="home.html" class="header-nav-btn btn">HOME</a></li>
+			<li class="header-menu-proj">
+				<p class="header-menu-proj-btn header-nav-btn">PROJECTS &#128899;</p>
+				<div class="header-menu-proj-content">
+					<a href="merrit.html">Merrit</a>
+					<a href="lilyparty.html">Lily Party</a>
+					<a href="#finalfrontier.html">Final Frontier</a>
+					<a href="#mythicallove.html">Mythical Love</a>
+					<a href="#slimejourney.html">Slime Journey</a>
+					<a href="#grotto.html">Grotto</a>
+					<a href="#lostNfound.html">Lost & Found Co.</a>
+				</div>
+			</li>
+			<li><a href="about.html" class="header-nav-btn btn">ABOUT</a></li>
+			<li><a href="https://drive.google.com/file/d/1GojvCwZEUEFXQjEGFkxs2UiNSt_9K7im/view?usp=sharing" target="_blank" class="header-nav-btn btn">RESUME</a></li>
+		</ul>
+	</nav>`;
+
 document.getElementById("footer").innerHTML =
 	`<div id="footer-contact">
 		<p class="p-highlight">Contact</p>
@@ -88,12 +81,21 @@ window.addEventListener('scroll', () => {
 	generalPrevScroll = currentScrollPos;
 });
 
-function loadDesktop() {
-	
-}
+// Window Resize Listener
 
-function loadMobile() {
+window.addEventListener('resize', checkScrollToTop);
+
+checkScrollToTop();
+
+function checkScrollToTop() {
+	const width = window.innerWidth;
+	const scrollToTop = document.getElementById('scroll-to-top');
 	
+	if (width <= 768) {
+		scrollToTop.innerHTML = '&#11205;';
+	} else {
+		scrollToTop.innerHTML = '&#128897; Scroll to Top';
+	}
 }
 
 function scrollToTop() {
