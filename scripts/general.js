@@ -19,11 +19,11 @@ document.getElementById("header").innerHTML =
 				<div class="header-menu-proj-content">
 					<a href="merrit.html">Merrit</a>
 					<a href="lilyparty.html">Lily Party</a>
-					<a href="#finalfrontier.html">Final Frontier</a>
-					<a href="#mythicallove.html">Mythical Love</a>
-					<a href="#slimejourney.html">Slime Journey</a>
-					<a href="#grotto.html">Grotto</a>
-					<a href="#lostNfound.html">Lost & Found Co.</a>
+					<a href="finalfrontier.html">Final Frontier</a>
+					<a href="mythicallove.html">Mythical Love</a>
+					<a href="slimejourney.html">Slime Journey</a>
+					<a href="grotto.html">Grotto</a>
+					<a href="lostNfound.html">Lost & Found Co.</a>
 				</div>
 			</li>
 			<li><a href="about.html" class="header-nav-btn btn">ABOUT</a></li>
@@ -41,7 +41,7 @@ document.getElementById("footer").innerHTML =
 		<a href="https://www.linkedin.com/in/vatsapon/" target="_blank"><img class="footer-link-icon btn" src="images/linkedin-icon.webp"></img></a>
 	</div>
 	<div id="footer-copyright">
-		<p class="p-highlight">&#169; 2023 by Vatsapon Asawakittiporn</p>
+		<p class="p-highlight">&#169; 2024 by Vatsapon Asawakittiporn</p>
 		<p>Host provided by GitHub pages</p>
 	</div>`
 
@@ -72,12 +72,13 @@ window.addEventListener('scroll', () => {
 		headerElement.style.top = `-${headerHeightString}`;
 	}
 	
-	if (currentScrollPos > window.outerHeight) {
-		scrollToTopElement.classList.remove('scroll-to-top-hide');
-	} else {
-		scrollToTopElement.classList.add('scroll-to-top-hide');
+	if (scrollToTopElement !== null) {
+		if (currentScrollPos > window.outerHeight) {
+			scrollToTopElement.classList.remove('scroll-to-top-hide');
+		} else {
+			scrollToTopElement.classList.add('scroll-to-top-hide');
+		}
 	}
-	
 	generalPrevScroll = currentScrollPos;
 });
 
@@ -89,12 +90,14 @@ checkScrollToTop();
 
 function checkScrollToTop() {
 	const width = window.innerWidth;
-	const scrollToTop = document.getElementById('scroll-to-top');
+	const scrollToTopElement = document.getElementById('scroll-to-top');
+	
+	if (scrollToTopElement === null) return;
 	
 	if (width <= 768) {
-		scrollToTop.innerHTML = '&#11205;';
+		scrollToTopElement.innerHTML = '&#11205;';
 	} else {
-		scrollToTop.innerHTML = '&#128897; Scroll to Top';
+		scrollToTopElement.innerHTML = '&#128897; Scroll to Top';
 	}
 }
 

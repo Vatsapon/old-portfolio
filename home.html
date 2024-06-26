@@ -17,26 +17,23 @@
 	
     <header id="header"></header>
 	
-	<div class="header" style="
-		position: relative;
-		width: 100%;">
-	</div>
+	<div id="header-offset"></div>
 	
 	<!-- Intro Section -->
 	
-	<div class="section" style="height: 1000px;">
-		<video id="intro-section-video" autoplay muted loop>
+	<div id="intro" class="section" style="height: 1000px;">
+		<video id="intro-video" autoplay muted loop>
 			<source src="videos/home-bg.mp4" alt="Video" type="video/mp4">
 		</video>
 		
-		<div class="intro-section-content">
-			<p style="font-size: 30px">
+		<div id="intro-content">
+			<p style="font-size: 65%; text-wrap: nowrap;">
 				<span class="p-bold">HEY THERE!</span>
 				<span style="font-size: 90%">MY NAME IS</span>
 			</p>
-			<p class="p-highlight" style="font-size: 55px; text-wrap: nowrap;">VATSAPON ASAWAKITTIPORN</p>
-			<div class="intro-role">GAME DEVELOPER / PROGRAMMER</div>
-			<p style="font-size: 20px; width: 700px;">I'm a Game Developer / Programmer with strong programming and scripting skills. I am interested in taking on challenging projects that involve new genres, styles, and types of work that I have never worked on yet.</p>
+			<p id="intro-name" class="p-highlight">VATSAPON ASAWAKITTIPORN</p>
+			<div id="intro-role">GAME DEVELOPER / PROGRAMMER</div>
+			<p id="intro-desc">I'm a Game Developer / Programmer with strong programming and scripting skills. I am interested in taking on challenging projects that involve new genres, styles, and types of work that I have never worked on yet.</p>
 		</div>
 			
 		<div class="section-split-right" style="
@@ -46,8 +43,8 @@
 	
 	<!-- Project Section -->
 	
-	<div class="section project-section">
-		<p class="p-highlight" style="font-size: 2.2vw">Personal / Academic Projects</p>
+	<div class="section project">
+		<p class="p-highlight">Personal / Academic Projects</p>
 		<div class="project-grid js-project-grid-personal"></div>
 		
 		<div class="section-split-left" style="
@@ -55,9 +52,9 @@
 		</div>
 	</div>
 	
-	<div class="section project-section" style="
+	<div class="section project" style="
 			background-image: linear-gradient(rgb(64, 0, 0), rgb(10, 24, 46));">
-		<p class="p-highlight" style="font-size: 2.2vw">Professional Projects</p>
+		<p class="p-highlight">Professional Projects</p>
 		<div class="project-grid js-project-grid-professional"></div>
 	</div>
 	

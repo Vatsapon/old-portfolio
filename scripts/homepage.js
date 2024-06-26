@@ -10,7 +10,7 @@ let homePrevScroll = window.scrollY;
 window.addEventListener('scroll', () => {
 	const currentScrollPos = window.scrollY;
 	
-	const introElement = document.getElementById('intro-section-video');
+	const introElement = document.getElementById('intro-video');
 	const introTop = currentScrollPos * parallaxForce;
 	
 	// Scroll up.

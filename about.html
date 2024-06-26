@@ -18,17 +18,73 @@
 	
     <div id="header"></div>
 	
+	<div id="header-offset"></div>
+	
 	<!-- Content Section -->
 	
-	<div class="section" style="
-		height: 1000px;
-		background-image: linear-gradient(black, rgb(18, 14, 25));">
-		<p class="p-highlight" style="font-size: 2.2vw">ABOUT ME</p>
-		<div class="project-grid js-project-grid-personal"></div>
-		
+	<div id="about" class="section">
+		<div id="content">
+			<p class="p-highlight" style="font-size: 55px">ABOUT ME</p>
+			<div id="info">
+				<img id="info-profile" src="images/profile.webp" alt="Profile IMG">
+				<div id="info-desc">
+					<p class="p-highlight" style="font-size: 150%">Hello!</p>
+					<p>My name is Vatsapon Asawakittiporn. a Game Developer / Programmer with a background in Game Design. My skill is oriented toward game development using Unity Engine to produce high-quality game with solid game design and principle.</p>
+					<div id="info-link">
+						<a href="mailto:vatsapon21@hotmail.com"><img class="footer-link-icon btn" src="images/email-icon.webp"></img></a>
+						<a href="https://www.linkedin.com/in/vatsapon/" target="_blank"><img class="footer-link-icon btn" src="images/linkedin-icon.webp"></img></a>
+					</div>
+				</div>
+			</div>
+			
+			<div id="skill">
+				<p class="p-highlight title">SKILLS</p>
+				<div id="skill-list">
+					<ul style="list-style-type: disc">
+						<li>Unity Engine</li>
+						<li>Visual Studio (C# IDE)</li>
+						<li>Eclipse (Java IDE)</li>
+						<li>Figma</li>
+						<li>Trello / Notion</li>
+						<li>GitHub / GitLab</li>
+						<li>Sourcetree / Fork</li>
+					</ul>
+					
+					<ul style="list-style-type: disc">
+						<li>Scripting / Programming</li>
+						<li>Game Design</li>
+						<li>UI / UX Design</li>
+						<li>Level Design</li>
+						<li>Technical Design</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div id="work-exp">
+				<p class="p-highlight title">WORK EXPERIENCE</p>
+				<div class="work-exp-flex">
+					<div class="work-exp-name">
+						<p>BITEGG Inc.</p>
+						<p>Lost & Found Co.</p>
+						<p>Oct 2023 - Present</p>
+					</div>
+					<div class="work-exp-desc">
+						<ul style="list-style-type: disc">
+							<li>Programmed, optimized, and fixed bugs / issues in game system to improved overall programming structure's workflow.</li>
+							<li>Collaborating and work closely with other programmers, designers, and QA.</li>
+						</ul>
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	
 	<!-- Footer Section -->
+	
+	<button id="scroll-to-top" class="btn scroll-to-top-hide" onclick="scrollToTop()">
+		&#128897; Scroll to Top
+	</button>
 	
 	<div id="footer"></div>
 	
