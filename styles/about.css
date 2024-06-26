@@ -8,6 +8,7 @@
 
 .title {
 	font-size: 30px;
+	text-wrap: nowrap;
 }
 
 #content {
@@ -20,6 +21,8 @@
 	row-gap: 30px;
 	
 	font-size: 20px;
+	
+	animation: fadeInTop 1s ease;
 }
 
 #info {
@@ -51,18 +54,21 @@
 	column-gap: 10px;
 }
 
-#skill {
+.content-section {
 	width: 100%;
 }
 
-#skill-list {
+.skill-list, .work-exp-list {
 	display: flex;
 	flex-direction: row;
 	
 	margin-top: 30px;
 	row-gap: 30px;
 	column-gap: 25%;
-	padding-left: 30px;
+}
+
+.work-exp-list {
+	justify-content: space-between;
 }
 
 @media (max-width: 768px) {
@@ -74,8 +80,16 @@
 		width: 75%;
 	}
 	
-	#skill-list {
+	.skill-list, .work-exp-list {
 		flex-direction: column;
+	}
+	
+	#info-link {
+		justify-content: center;
+	}
+	
+	.title {
+		text-align: center;
 	}
 }
 

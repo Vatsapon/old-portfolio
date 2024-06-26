@@ -24,7 +24,7 @@
 	
 	<div id="about" class="section">
 		<div id="content">
-			<p class="p-highlight" style="font-size: 55px">ABOUT ME</p>
+			<p class="p-highlight title" style="font-size: 55px">ABOUT ME</p>
 			<div id="info">
 				<img id="info-profile" src="images/profile.webp" alt="Profile IMG">
 				<div id="info-desc">
@@ -37,9 +37,9 @@
 				</div>
 			</div>
 			
-			<div id="skill">
+			<div class="content-section">
 				<p class="p-highlight title">SKILLS</p>
-				<div id="skill-list">
+				<div class="skill-list">
 					<ul style="list-style-type: disc">
 						<li>Unity Engine</li>
 						<li>Visual Studio (C# IDE)</li>
@@ -60,15 +60,15 @@
 				</div>
 			</div>
 			
-			<div id="work-exp">
+			<div class="content-section">
 				<p class="p-highlight title">WORK EXPERIENCE</p>
-				<div class="work-exp-flex">
-					<div class="work-exp-name">
-						<p>BITEGG Inc.</p>
+				<div class="work-exp-list">
+					<div class="work-exp-name" style="flex: 0.25">
+						<p class="p-highlight">BITEGG Inc.</p>
 						<p>Lost & Found Co.</p>
-						<p>Oct 2023 - Present</p>
+						<p>Oct 2023 - <strong>Present</strong></p>
 					</div>
-					<div class="work-exp-desc">
+					<div class="work-exp-desc" style="flex: 0.75">
 						<ul style="list-style-type: disc">
 							<li>Programmed, optimized, and fixed bugs / issues in game system to improved overall programming structure's workflow.</li>
 							<li>Collaborating and work closely with other programmers, designers, and QA.</li>
@@ -77,6 +77,8 @@
 					</div>
 				</div>
 			</div>
+			
+			<button id="generic-btn" class="btn">RESUME</button>
 		</div>
 	</div>
 	
