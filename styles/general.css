@@ -4,6 +4,8 @@
 	--base-color: #203555;
 	--highlight-color: #FFF48E;
 	--active-color: #FFBF00;
+	
+	--
 }
 
 * {
@@ -45,6 +47,14 @@ button {
 
 .section {
 	position: relative;
+}
+
+.parallax-img {
+	position: relative;
+	
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .p-bold, .p-highlight {

@@ -15,7 +15,7 @@ document.getElementById("header").innerHTML =
 		<ul id="header-menu">
 			<li><a href="home.html" class="header-nav-btn btn">HOME</a></li>
 			<li class="header-menu-proj">
-				<p class="header-menu-proj-btn header-nav-btn">PROJECTS &#128899;</p>
+				<p class="header-menu-proj-btn header-nav-btn">PROJECTS <i class="fa fa-caret-down"></i></p>
 				<div class="header-menu-proj-content">
 					<a href="merrit.html">Merrit</a>
 					<a href="lilyparty.html">Lily Party</a>
@@ -47,6 +47,7 @@ document.getElementById("footer").innerHTML =
 
 // Scroll Event Handler
 
+const parallaxForce = 0.5;
 let generalPrevScroll = window.scrollY;
 
 window.addEventListener('scroll', () => {
@@ -82,6 +83,20 @@ window.addEventListener('scroll', () => {
 	generalPrevScroll = currentScrollPos;
 });
 
+
+
+// Parallax video background
+window.addEventListener('scroll', () => {
+	const currentScrollPos = window.scrollY;
+	const introTop = currentScrollPos * parallaxForce;
+	
+	const parallaxElements = document.getElementsByClassName('parallax-img');
+	
+	for (var i = 0; i < parallaxElements.length; i++) {
+		parallaxElements[i].style.top = `${introTop}px`;
+	}
+});
+
 // Window Resize Listener
 
 window.addEventListener('resize', checkScrollToTop);
@@ -95,9 +110,9 @@ function checkScrollToTop() {
 	if (scrollToTopElement === null) return;
 	
 	if (width <= 768) {
-		scrollToTopElement.innerHTML = '&#11205;';
+		scrollToTopElement.innerHTML = '<i class="fa fa-chevron-up"></i>';
 	} else {
-		scrollToTopElement.innerHTML = '&#128897; Scroll to Top';
+		scrollToTopElement.innerHTML = '<i class="fa fa-chevron-circle-up"></i> Scroll to Top';
 	}
 }
 
