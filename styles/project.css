@@ -53,7 +53,14 @@
 }
 
 .info-section {
-	background-color: red;
+	font-size: 20px;
+	background-image: linear-gradient(var(--bg-color1), var(--bg-color2));
+	padding: 75px 0 175px 0;
+}
+
+.info-link {
+	color: var(--highlight-color);
+	text-decoration: underline;
 }
 
 .info-preview {
@@ -72,7 +79,41 @@
 	
 	font-size: 20px;
 	
-	top: 0;
-	bottom: 150px;
 	width: 1000px;
+	gap: 30px;
+}
+
+.gallery {
+	position: relative;
+	
+	width: 700px;
+	height: 500px;
+	
+	border: 2px solid white;
+}
+
+.gallery-content img {
+	object-fit: cover;
+}
+
+.gallery-prev, .gallery-next {
+	position: absolute;
+	cursor: pointer;
+	
+	top: 50%;
+	
+	padding: 20px;
+	text-align: center;
+	
+	font-size: 50px;
+	color: white;
+	background-color: rgb(0, 0, 0, 0.5);
+}
+
+.gallery-prev {
+	left: 0;
+}
+
+.gallery-next {
+	right: 0;
 }

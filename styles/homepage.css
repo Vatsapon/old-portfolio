@@ -59,7 +59,7 @@
 	height: 100%;
 	padding: 100px 10% 200px 10%;
 	
-	background-image: linear-gradient(rgb(18, 14, 25), rgb(10, 24, 46));
+	background-image: linear-gradient(var(--bg-color1), var(--bg-color2));
 }
 
 .project p {
