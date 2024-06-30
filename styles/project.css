@@ -122,12 +122,16 @@
 	border: 2px solid white;
 }
 
-.gallery:hover .gallery-prev, .gallery:hover .gallery-next {
+.gallery:hover .prev-btn, .gallery:hover .next-btn {
 	opacity: 1;
 	transition: all 0.2s ease, opacity 0.3s ease;
 }
 
-.gallery-prev, .gallery-next {
+.gallery button:hover {
+	cursor: pointer;
+}
+
+.prev-btn, .next-btn {
 	position: absolute;
 	cursor: pointer;
 	
@@ -145,11 +149,11 @@
 	transition: all 0.2s ease, opacity 0.3s ease;
 }
 
-.gallery-prev {
+.prev-btn {
 	left: 0;
 }
 
-.gallery-next {
+.next-btn {
 	right: 0;
 }
 

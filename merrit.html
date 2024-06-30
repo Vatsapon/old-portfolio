@@ -33,7 +33,7 @@
 				<a class="demo-btn btn" href="https://drive.google.com/file/d/1CAE113RMQ8s-JKz8hw5xWSUFvfWHoqpy/view?usp=sharing" target="_blank">
 					<i class="fa fa-download"></i> &nbsp; DEMO
 				</a>
-				<div style="">
+				<div>
 					<p style="
 						display: inline;
 						margin-right: 10px;
@@ -66,29 +66,33 @@
 		--bg-color2: rgb(10, 24, 46);">
 		<div class="info-content">
 			<div id="gallery-gameplay" class="gallery">
-				<div class="gallery-content">
+				<button class="gallery-content">
 					<img src="images/merrit/merrit-screenshot-1.png" alt="Merrit Screenshot 1">
-				</div>
+				</button>
 				
-				<div class="gallery-content">
+				<button class="gallery-content">
 					<img src="images/merrit/merrit-screenshot-2.png" alt="Merrit Screenshot 2">
-				</div>
+				</button>
 				
-				<div class="gallery-content">
+				<button class="gallery-content">
 					<img src="images/merrit/merrit-screenshot-3.png" alt="Merrit Screenshot 3">
-				</div>
+				</button>
 				
-				<button class="gallery-prev btn" onclick="prevSlide('gallery-gameplay')"><i class="fa fa-angle-left"></i></button>
-				<button class="gallery-next btn" onclick="nextSlide('gallery-gameplay')"><i class="fa fa-angle-right"></i></button>
+				<button class="prev-btn btn" onclick="prevSlide('gallery-gameplay')"><i class="fa fa-angle-left"></i></button>
+				<button class="next-btn btn" onclick="nextSlide('gallery-gameplay')"><i class="fa fa-angle-right"></i></button>
 			</div>
 			
 			<div id="gallery-award" class="gallery">
-				<div class="gallery-content">
-					<img src="images/merrit/merrit-award.png" alt="Merrit Award">
-				</div>
+				<button class="gallery-content">
+					<img src="images/merrit/merrit-award.jpg" alt="Merrit Award">
+				</button>
 				
-				<button class="gallery-prev btn" onclick="prevSlide('gallery-award')"><i class="fa fa-angle-left"></i></button>
-				<button class="gallery-next btn" onclick="nextSlide('gallery-award')"><i class="fa fa-angle-right"></i></button>
+				<button class="gallery-content">
+					<img src="images/merrit/merrit-certificate.png" alt="Merrit Certificate">
+				</button>
+				
+				<button class="prev-btn btn" onclick="prevSlide('gallery-award')"><i class="fa fa-angle-left"></i></button>
+				<button class="next-btn btn" onclick="nextSlide('gallery-award')"><i class="fa fa-angle-right"></i></button>
 			</div>
 			
 			<p class="p-highlight title">Contributions & Works</p>
@@ -103,7 +107,7 @@
 			<p>Working on this large-scale team project and assisting another programmer, I am the team's lead programmer with experience in game design. As such, I serve as a technical designer, meeting, and consulting with both teams as part of this enormous team effort to ensure that everyone understands what each element does and how it works.</p>
 			
 			<div class="img-ref">
-				<button onclick="openIMGPreview('images/merrit/merrit-hierarchy.png','','')">
+				<button onclick="setIMGPreview('images/merrit/merrit-hierarchy.png', 'Player & Enemies class structure','')">
 					<img src="images/merrit/merrit-hierarchy.png" alt="Player & Enemies class structure">
 				</button>
 				<em>Ref: Player & Enemies class structure</em>
@@ -114,16 +118,16 @@
 			<p>Because there are numerous similarities between the player and enemy systems, I decided to implement the <a class="info-link" href="https://refactoring.guru/design-patterns/factory-method" target="_blank">Factory</a> design pattern to work on both of them. also to facilitate the management of changes for both programming and design terms.</p>
 			
 			<div id="gallery-script" class="gallery">
-				<div class="gallery-content">
+				<button class="gallery-content">
 					<img src="images/merrit/merrit-player-statm.png" alt="Player Stat Manager">
-				</div>
+				</button>
 				
-				<div class="gallery-content">
+				<button class="gallery-content">
 					<img src="images/merrit/merrit-combatm.png" alt="Combat Manager">
-				</div>
+				</button>
 				
-				<button class="gallery-prev btn" onclick="prevSlide('gallery-script')"><i class="fa fa-angle-left"></i></button>
-				<button class="gallery-next btn" onclick="nextSlide('gallery-script')"><i class="fa fa-angle-right"></i></button>
+				<button class="prev-btn btn" onclick="prevSlide('gallery-script')"><i class="fa fa-angle-left"></i></button>
+				<button class="next-btn btn" onclick="nextSlide('gallery-script')"><i class="fa fa-angle-right"></i></button>
 			</div>
 			
 			<p>I also collaborated closely with designers, discussing many elements that balance game mechanics. Because of this, I make sure the programmer offers the most efficient approaches to ensure designers can quickly adjust and make changes. By sketching all things out in a flowchart and giving the programmer just enough information to comprehend, the designer could assign tasks to the programmers without any issues.</p>
@@ -132,7 +136,11 @@
 	</div>
 	
 	<div id="img-preview">
-		<button class="close-btn btn" onclick="closeIMGPreview()">&#10006;</button>
+		<button class="close-btn btn" onclick="closePreview()">&#10006;</button>
+		
+		<button class="prev-btn btn" style="opacity: 1; left: 5vw;" onclick="prevPreview()"><i class="fa fa-angle-left"></i></button>
+		<button class="next-btn btn" style="opacity: 1; right: 5vw;" onclick="nextPreview()"><i class="fa fa-angle-right"></i></button>
+		
 		<img id="img-preview-display" src="images/merrit/merrit-player-statm.png" alt="Player Stat Manager">
 		<p id="img-preview-name" class="p-highlight" style="font-size: 120%">Player Stat Manager</p>
 		<p id="img-preview-desc">This will display player's stat</p>
