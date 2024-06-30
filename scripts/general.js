@@ -37,8 +37,8 @@ document.getElementById("footer").innerHTML =
 		<p>(+66) 83-292-2652</p>
 	</div>
 	<div id="footer-link">
-		<a href="mailto:vatsapon21@hotmail.com"><img class="footer-link-icon btn" src="images/email-icon.webp"></img></a>
-		<a href="https://www.linkedin.com/in/vatsapon/" target="_blank"><img class="footer-link-icon btn" src="images/linkedin-icon.webp"></img></a>
+		<a href="mailto:vatsapon21@hotmail.com"><img class="footer-link-icon btn" src="images/email-icon.png"></img></a>
+		<a href="https://www.linkedin.com/in/vatsapon/" target="_blank"><img class="footer-link-icon btn" src="images/linkedin-icon.png"></img></a>
 	</div>
 	<div id="footer-copyright">
 		<p class="p-highlight">&#169; 2024 by Vatsapon Asawakittiporn</p>

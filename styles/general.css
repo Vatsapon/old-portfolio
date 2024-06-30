@@ -45,6 +45,7 @@ button {
 
 .section {
 	position: relative;
+	height: auto;
 }
 
 .parallax-img {
@@ -526,7 +527,7 @@ body:has(#header-side-menu:checked) {
     }
 	
 	1% {
-		opacity: 0.1;
+		opacity: 0.01;
         display: block; 
 	}
   
@@ -542,8 +543,8 @@ body:has(#header-side-menu:checked) {
         display: block; 
     }
 	
-	50% {
-		opacity: 0.5;
+	99% {
+		opacity: 0.01;
         display: block; 
 	}
   

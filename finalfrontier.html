@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title>Vatsapon Asawakittiporn | Final Frontier</title>
+	<link rel="icon" type="image/x-icon" href="images/favicon.png">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth">
+    <link rel="stylesheet" href="styles/general.css">
+	<link rel="stylesheet" href="styles/project.css">
+</head>
+<body>
+	<!-- Header Section -->
+	
+    <div id="header"></div>
+	
+	<div id="header-offset"></div>
+	
+	<!-- Content Section -->
+	
+	<div id="proj-section" class="section"></div>
+	
+	<div id="proj-summary-section" class="info-section section">
+		<div class="info-content">
+			<video class="info-preview" controls autoplay muted loop>
+				<source src="images/finalfrontier/finalfrontier-preview.webm" alt="LilyParty Preview" type="video/mp4">
+			</video>
+			
+			<p><span class="p-highlight" style="font-size: 120%">Final Frontier</span> is a 2D top-down shooter game where you have to fight the enemies which trying to invade your base. The game concept is based on the Tower Defense game style but in free-form movement.</p>
+			<p>The concept is similar to other Tower Defense games. But the difference is that the player doesn't control each tower, but as a character to fight against incoming hostile enemies instead. The enemy appears in waves approaching from the edge of the map which the player can prepare and arm themselves in-between waves to fight against them.</p>
+			<p>The player can purchase and customize weapons and gadgets to gain stronger weapons with different attributes and stats after the end of each wave. The longer the wave, the stronger they are.</p>
+		</div>
+		
+		<div class="section-split-left" style="--color: black"></div>
+	</div>
+	
+	<div class="info-section section" style="
+		--bg-color1: black;
+		--bg-color2: rgb(10, 24, 46);">
+		<div class="info-content">
+			<div id="gallery-gameplay" class="gallery"></div>
+			
+			<p class="p-highlight title">Contributions & Works</p>
+			<ul style="list-style-type: disc; margin-left: 30px">
+				<li>Designed and organized the whole mechanic and systems</li>
+				<li>Created unique customization configuration</li>
+				<li>Arranged all game scripts in an easy-to-read order</li>
+			</ul>
+			
+			<p>The deadline for completing this academic project was set for the full semester, or about 14 to 15 weeks. The goal of this project is to create a game containing at least fifty expression or fantasy elements. <a class="info-link" href="https://store.steampowered.com/app/209690/Fieldrunners/" target="_blank">Fieldrunners</a> and other 2D shooting games served as my inspiration for this project as a tower defense and free-form shooter game hybrid.</p>
+			<p>Therefore, I realized that most of my scripts are reusable for other projects and can be tweaked in more complex methods to improve performance. Examples of this include the Player Movement Script and Audio Manager, which can be made functional with only a few variables and a simple drag-and-drop action.</p>
+			<p>Even so, it's challenging to deal with the design and graphics while simultaneously working on other projects. However, it was one of the most challenging circumstances for me to grow as an individual and learn new skills.</p>
+			
+			<div id="gallery-script" class="gallery"></div>
+			
+			<p class="p-highlight title">My Tool Creation - Editor & Debug Tools</p>
+			<p>Most of the scripts I wrote for this project have customizable visual displays on the inspector that are easy to configure or modify using customization variables. This will boost productivity and enhance the visual appearance of the project, making it simpler to find, organize, and make changes efficiently.</p>
+			<p>I've created three different kinds of debugs for this project. One is the Editor, which modifies the entire inspector visualization. The second is an attribute, which modifies a certain property's appearance depending on a kind or condition of the variable. The third window is the Editor Window, which is a separate Inspector and fully customizable which can show any type of data.</p>
+			<p>This will help with debugging and data inspection during runtime for various purposes, including improvisation, balancing, and debugging.</p>
+		</div>
+	</div>
+	
+	<div id="img-preview">
+		<button class="close-btn btn" onclick="closePreview()">&#10006;</button>
+		
+		<button class="prev-btn btn" style="opacity: 1; left: 5vw;" onclick="prevPreview()"><i class="fa fa-angle-left"></i></button>
+		<button class="next-btn btn" style="opacity: 1; right: 5vw;" onclick="nextPreview()"><i class="fa fa-angle-right"></i></button>
+		
+		<img id="img-preview-display">
+		<p id="img-preview-name" class="p-highlight" style="font-size: 120%"></p>
+		<p id="img-preview-desc"></p>
+	</div>
+	
+	<!-- Footer Section -->
+	
+	<button id="scroll-to-top" class="btn scroll-to-top-hide" onclick="scrollToTop()">
+		<i class="fa fa-chevron-circle-up"></i> Scroll to Top
+	</button>
+	
+	<div id="footer"></div>
+	
+	<script src="scripts/general.js"></script>
+	<script src="datas/finalfrontier.js"></script>
+	<script src="scripts/project.js"></script>
+</body>
+</html>

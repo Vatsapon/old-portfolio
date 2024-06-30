@@ -1,29 +1,63 @@
-var galleryDatas = [];
+var galleryRuntimeDatas = [];
 const galleryInterval = 3;
 
-setUp();
+setupIntro();
+setupGallery();
 
-// Set up gallery.
-function setUp() {
+// Setup intro.
+function setupIntro() {
+	const projectSectionElement = document.getElementById('proj-section');
+	const projectSummarySectionElement = document.getElementById('proj-summary-section');
+	
+	projectSectionElement.innerHTML = `
+		<img class="parallax-img" src="${infoData.bgRef}">
+		
+		<div class="proj-content">
+			<p class="p-highlight" style="font-size: 220%">${infoData.name}</p>
+			<p class="p-bold" style="font-size: 120%">${infoData.info.type} <span style="color: var(--highlight-color)">|</span> ${infoData.info.role} <span style="color: var(--highlight-color)">|</span> ${infoData.info.date}</p>
+			<p style="margin: 20px 0">${infoData.description}</p>
+			<div class="demo-download">
+				<a class="demo-btn btn" href="${infoData.downloadRef}" target="_blank">
+					<i class="fa fa-download"></i> &nbsp; ${infoData.downloadLabel}
+				</a>
+				<div>
+					<p style="
+						display: inline;
+						margin-right: 10px;
+						vertical-align: middle;">Made with</p>
+					<a href="https://unity.com/" target="_blank"><img class="unity-icon btn" src="images/unity-icon.png" alt="Unity's Logo"></a>
+				</div>
+			</div>
+		</div>
+			
+		<div class="section-split-right" style="--color: ${colorData.firstColor}"></div>`;
+		
+	projectSummarySectionElement.style.setProperty('--bg-color1', colorData.firstColor);
+	projectSummarySectionElement.style.setProperty('--bg-color2', colorData.secondColor);
+}
+
+// Setup gallery.
+function setupGallery() {
 	const galleries = document.getElementsByClassName('gallery');
 	
 	for (let i = 0; i < galleries.length; i++) {
 		const galleryID = galleries[i].id;
+		const galleryData = getGalleryDataFromID(galleryID);
+		
+		// Load from data.
+		for (let j = 0; j < galleryData.gallery.length; j++) {
+			const galleryDataContent = galleryData.gallery[j];
+			galleries[i].innerHTML += `
+			<button class="gallery-content" onclick="setGalleryPreview('${galleryID}', ${j})">
+				<img src="${galleryDataContent.source}" alt="${galleryDataContent.name}">
+			</button>`;
+		}
+		
+		galleries[i].innerHTML += `
+			<button class="prev-btn btn" onclick="prevSlide('${galleryID}')"><i class="fa fa-angle-left"></i></button>
+			<button class="next-btn btn" onclick="nextSlide('${galleryID}')"><i class="fa fa-angle-right"></i></button>`;
+		
 		setSlide(galleryID, 0);
-		
-		galleryDatas[i] = {
-			id: galleryID,
-			index: 0,
-		}
-		
-		// Add Preview button event.
-		let galleryContents = galleries[i].getElementsByClassName('gallery-content');
-		
-		for (let j = 0; j < galleryContents.length; j++) {
-			galleryContents[j].addEventListener('click', () => {
-				setGalleryPreview(galleryID, j);
-			});
-		}
 	}
 	
 	setInterval(() => {
@@ -34,7 +68,7 @@ function setUp() {
 }
 
 function setSlide(elementID, index) {
-	const galleryData = getGalleryFromID(elementID);
+	const galleryData = getGalleryDataFromID(elementID);
 	
 	if (!galleryData) return;
 	
@@ -45,25 +79,31 @@ function setSlide(elementID, index) {
 	if (galleryData.index > galleryElement.length - 1) galleryData.index = 0;
 	
 	for (let i = 0; i < galleryElement.length; i++) {
-		galleryElement[i].style.display = i=== galleryData.index ? 'block' : 'none';
+		if (i == galleryData.index) {
+			galleryElement[i].style.animation = 'fadeInBlock 0.5s ease'
+			galleryElement[i].style.display = 'block';
+		} else if (galleryElement[i].style.display === 'block') {
+			galleryElement[i].style.animation = 'fadeOutBlock 0.5s ease'
+			galleryElement[i].style.display = 'none';
+		}
 	}
 }
 
 function prevSlide(elementID) {
-	const galleryData = getGalleryFromID(elementID);
+	const galleryData = getGalleryDataFromID(elementID);
 	if (!galleryData) return;
 	
 	setSlide(elementID, galleryData.index--);
 }
 
 function nextSlide(elementID) {
-	const galleryData = getGalleryFromID(elementID);
+	const galleryData = getGalleryDataFromID(elementID);
 	if (!galleryData) return;
 	
 	setSlide(elementID, galleryData.index++);
 }
 
-function getGalleryFromID(galleryID) {
+function getGalleryDataFromID(galleryID) {
 	for (let i = 0; i < galleryDatas.length; i++) {
 		if (galleryDatas[i].id == galleryID) {
 			return galleryDatas[i];
@@ -101,6 +141,8 @@ function showPreview() {
 	const imgNameElement = document.getElementById('img-preview-name');
 	const imgDescriptionElement = document.getElementById('img-preview-desc');
 	
+	imgPreviewElement.style.animation = 'fadeInBlock 0.2s ease';
+	
 	imgDisplayElement.src = previewData.source;
 	imgPreviewElement.style.display = 'block';
 	imgNameElement.innerHTML = previewData.name;
@@ -112,6 +154,8 @@ function closePreview() {
 	previewIndex = 0;
 	
 	const imgPreviewElement = document.getElementById('img-preview');
+	
+	imgPreviewElement.style.animation = 'fadeOutBlock 0.2s ease';
 	imgPreviewElement.style.display = 'none';
 }
 
@@ -143,7 +187,7 @@ function setGalleryPreview(galleryID, index) {
 	// If there's image previewing, cancel.
 	if (previewDatas.length > 0) return;
 	
-	const galleryData = getGalleryFromID(galleryID);
+	const galleryData = getGalleryDataFromID(galleryID);
 	
 	if (!galleryData) return;
 	
@@ -151,11 +195,12 @@ function setGalleryPreview(galleryID, index) {
 
 	for (var i = 0; i < galleryElement.length; i++) {
 		var imgData = galleryElement[i].getElementsByTagName('img')[0];
+		var galleryDataContent = galleryData.gallery[i];
 		
 		previewDatas[i] = {
-			source: imgData.src,
-			name: imgData.alt,
-			description: '',
+			source: galleryDataContent.source,
+			name: galleryDataContent.name,
+			description: galleryDataContent.description,
 		}
 	}
 

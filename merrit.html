@@ -22,36 +22,12 @@
 	
 	<!-- Content Section -->
 	
-	<div class="proj-section section">
-		<img class="parallax-img" src="images/merrit/merrit-bg.jpg">
-		
-		<div class="proj-content">
-			<p class="p-highlight" style="font-size: 220%">MERRIT</p>
-			<p class="p-bold" style="font-size: 120%">Personal Team of 16 <span style="color: var(--highlight-color)">|</span> Gameplay Programmer <span style="color: var(--highlight-color)">|</span> Dec 2021 - Apr 2022</p>
-			<p style="margin: 20px 0">A 2D Roguelike platformer game where the player played as one of the Dumian. He has to explore around the dungeon to find his sister while fighting his way against fearsome enemies along the way.</p>
-			<div class="demo-download">
-				<a class="demo-btn btn" href="https://drive.google.com/file/d/1CAE113RMQ8s-JKz8hw5xWSUFvfWHoqpy/view?usp=sharing" target="_blank">
-					<i class="fa fa-download"></i> &nbsp; DEMO
-				</a>
-				<div>
-					<p style="
-						display: inline;
-						margin-right: 10px;
-						vertical-align: middle;">Made with</p>
-					<a href="https://unity.com/" target="_blank"><img class="unity-icon btn" src="images/unity-icon.png" alt="Unity's Logo"></a>
-				</div>
-			</div>
-		</div>
-			
-		<div class="section-split-right" style="--color: rgb(34, 62, 93)"></div>
-	</div>
+	<div id="proj-section" class="section"></div>
 	
-	<div class="info-section section" style="
-		--bg-color1: rgb(34, 62, 93);
-		--bg-color2: rgb(10, 24, 46);">
+	<div id="proj-summary-section" class="info-section section">
 		<div class="info-content">
 			<video class="info-preview" controls autoplay muted loop>
-				<source src="images/merrit/merrit-preview.webm" alt="Video" type="video/mp4">
+				<source src="images/merrit/merrit-preview.webm" alt="Merrit Preview" type="video/mp4">
 			</video>
 			
 			<p><span class="p-highlight" style="font-size: 120%">Merrit</span> is a 2D roguelike platformer game where the player has to explore the dungeon looking for his lost sister while fighting fearsome enemies along the way. The game concept was inspired by many famous 2D platformer games such as <a class="info-link" href="https://www.hollowknight.com/" target="_blank">Hollow Knight</a>, <a class="info-link" href="https://dead-cells.com/" target="_blank">Dead Cell</a>, <a class="info-link" href="https://www.orithegame.com/" target="_blank">Ori and the Will of the Wisps</a>, etc.</p>
@@ -65,35 +41,9 @@
 		--bg-color1: black;
 		--bg-color2: rgb(10, 24, 46);">
 		<div class="info-content">
-			<div id="gallery-gameplay" class="gallery">
-				<button class="gallery-content">
-					<img src="images/merrit/merrit-screenshot-1.png" alt="Merrit Screenshot 1">
-				</button>
-				
-				<button class="gallery-content">
-					<img src="images/merrit/merrit-screenshot-2.png" alt="Merrit Screenshot 2">
-				</button>
-				
-				<button class="gallery-content">
-					<img src="images/merrit/merrit-screenshot-3.png" alt="Merrit Screenshot 3">
-				</button>
-				
-				<button class="prev-btn btn" onclick="prevSlide('gallery-gameplay')"><i class="fa fa-angle-left"></i></button>
-				<button class="next-btn btn" onclick="nextSlide('gallery-gameplay')"><i class="fa fa-angle-right"></i></button>
-			</div>
+			<div id="gallery-gameplay" class="gallery"></div>
 			
-			<div id="gallery-award" class="gallery">
-				<button class="gallery-content">
-					<img src="images/merrit/merrit-award.jpg" alt="Merrit Award">
-				</button>
-				
-				<button class="gallery-content">
-					<img src="images/merrit/merrit-certificate.png" alt="Merrit Certificate">
-				</button>
-				
-				<button class="prev-btn btn" onclick="prevSlide('gallery-award')"><i class="fa fa-angle-left"></i></button>
-				<button class="next-btn btn" onclick="nextSlide('gallery-award')"><i class="fa fa-angle-right"></i></button>
-			</div>
+			<div id="gallery-award" class="gallery"></div>
 			
 			<p class="p-highlight title">Contributions & Works</p>
 			<ul style="list-style-type: disc; margin-left: 30px">
@@ -117,18 +67,7 @@
 			<p>Programming a 2D platformer isn't difficult, at first glance. The challenging aspect, though, is in how it creates and applies algorithms that align with unique game mechanics and designs. I still lack of proper programming structure system in several areas because of my lack of skills and inexperience working on large projects. Still, I could count it as a challenge to work on new projects that I had never attempted before.</p>
 			<p>Because there are numerous similarities between the player and enemy systems, I decided to implement the <a class="info-link" href="https://refactoring.guru/design-patterns/factory-method" target="_blank">Factory</a> design pattern to work on both of them. also to facilitate the management of changes for both programming and design terms.</p>
 			
-			<div id="gallery-script" class="gallery">
-				<button class="gallery-content">
-					<img src="images/merrit/merrit-player-statm.png" alt="Player Stat Manager">
-				</button>
-				
-				<button class="gallery-content">
-					<img src="images/merrit/merrit-combatm.png" alt="Combat Manager">
-				</button>
-				
-				<button class="prev-btn btn" onclick="prevSlide('gallery-script')"><i class="fa fa-angle-left"></i></button>
-				<button class="next-btn btn" onclick="nextSlide('gallery-script')"><i class="fa fa-angle-right"></i></button>
-			</div>
+			<div id="gallery-script" class="gallery"></div>
 			
 			<p>I also collaborated closely with designers, discussing many elements that balance game mechanics. Because of this, I make sure the programmer offers the most efficient approaches to ensure designers can quickly adjust and make changes. By sketching all things out in a flowchart and giving the programmer just enough information to comprehend, the designer could assign tasks to the programmers without any issues.</p>
 			<p>Despite this, it might be challenging to ensure that they follow through with the programmer and designer template. Once it did, though, things ran smoothly and the game progressed more efficiently, which was worth it in the long term. Moreover, both groups could support one another when necessary.</p>
@@ -141,9 +80,9 @@
 		<button class="prev-btn btn" style="opacity: 1; left: 5vw;" onclick="prevPreview()"><i class="fa fa-angle-left"></i></button>
 		<button class="next-btn btn" style="opacity: 1; right: 5vw;" onclick="nextPreview()"><i class="fa fa-angle-right"></i></button>
 		
-		<img id="img-preview-display" src="images/merrit/merrit-player-statm.png" alt="Player Stat Manager">
-		<p id="img-preview-name" class="p-highlight" style="font-size: 120%">Player Stat Manager</p>
-		<p id="img-preview-desc">This will display player's stat</p>
+		<img id="img-preview-display">
+		<p id="img-preview-name" class="p-highlight" style="font-size: 120%"></p>
+		<p id="img-preview-desc"></p>
 	</div>
 	
 	<!-- Footer Section -->
@@ -155,6 +94,7 @@
 	<div id="footer"></div>
 	
 	<script src="scripts/general.js"></script>
+	<script src="datas/merrit.js"></script>
 	<script src="scripts/project.js"></script>
 </body>
 </html>
