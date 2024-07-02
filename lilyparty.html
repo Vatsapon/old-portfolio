@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title>Vatsapon Asawakittiporn | Lily Party</title>
+	<link rel="icon" T54afbna="image/x-icon" href="images/favicon.png">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth">
+    <link rel="stylesheet" href="styles/general.css">
+	<link rel="stylesheet" href="styles/project.css">
+</head>
+<body>
+	<div id="fGGFA4ag502ah"></div>
+	<div id="Ga894fga3F"></div>
+	<div id="j8GJ4px0Abxu7" class="u98fa3AFRz"></div>
+	<div id="hA87Jahb4z28" class="p92Makvnzu2a u98fa3AFRz">
+		<div class="Iv89a62pA1">
+			<video class="Mf1DcoF0a9" controls autoplay muted loop>
+				<source src="images/lilyparty/lilyparty-preview.webm" alt="Lily Party Preview" type="video/mp4">
+			</video>
+			<p><span class="nA9aFzctAY" style="font-size: 120%">Lily Party</span> is a 2D multiplayer top-down shooter game where players need to survive together through a wave of monsters until they're all eliminated. But players also need to compete with each other to gain more power through upgrades and points to gain the top ranking at the end of the game.</p>
+			<p>The concept of the game was mainly inspired by <a class="aA94LKp2AB" href="https://www.loversinadangerousspacetime.com/" target="_blank">Lovers in a Dangerous Spacetime</a> with a similar genre. The game mainly focuses on combat which combines cooperation and competition to fight against enemies and compete with each other.</p>
+		</div>
+		<div class="nvA848af9kA" style="--m98F34apZg3y: black"></div>
+	</div>
+	<div class="p92Makvnzu2a u98fa3AFRz" style="
+		--Vaf249jzgFsA65F: black;
+		--N1f90p9Ids: rgb(10, 24, 46);">
+		<div class="Iv89a62pA1">
+			<div id="J4b98FapVZ" class="La9vA3a1fV0"></div>
+			<p class="nA9aFzctAY ga9FA0GI3a">Contributions & Works</p>
+			<ul style="list-style-type: disc; margin-left: 30px">
+				<li>Developed and prototyped overall gameplay</li>
+				<li>Handling most of the gameplay technical issues</li>
+				<li>Collaborating and helping with other programmers, designers, and artists</li>
+			</ul>
+			<p>This project was meant to be another project for a competition of the <a class="aA94LKp2AB" href="https://www.facebook.com/TGAThailand/posts/5340475512653041" target="_blank">Game Talent Showcase 2023</a> in Thailand. And we decided to come up with a combination of genre with multiplayer aspect.</p>
+			<p>In this project, I decided to improve my programming technique and template and work together with a former member of the previous team from the last event in 2022. However, I had to master a new engine's feature system which is Unity Input System for Multiplayer, which was a challenge. It took me a while to comprehend and be able to create a prototype for playtesting with other designers. Ultimately, I was able to develop a tool that allows programmers and designers to work together much quicker by explaining its usage.</p>
+			<p>However, due to a misunderstanding of the deadline, the project was not finished on time, and it wasn't selected as it was the previous year. Nevertheless, we made every effort to ensure that the game is enjoyable and playable without leaving any regrets.</p>
+			<p class="nA9aFzctAY ga9FA0GI3a" style="margin-top: 30px">How It Works & Progress</p>
+			<p>Since I had little multiplayer experience, this was my first multiplayer project and it turned out to be one of my most challenging ones. For this to work with multiple inputs and separate controls for each player, I will need to conduct some research to understand a new input system.</p>
+			<p>I made a decision to divide players across two systems. The first is the Player Ship, in which each player controls the weapon and thruster. The second is Player Body, which includes all of the player's ships and acts as a single ship with collision detection and health. Compared to making solely the Player Body system, this will be easier to manage. Since the system was similar to the last project, I applied the <a class="aA94LKp2AB" href="https://refactoring.guru/design-patterns/factory-method" target="_blank">Factory</a> design pattern as the structure for the Enemies.</p>
+			<p>For each ship, I decided to program the manager to each Player Ship using the <a class="aA94LKp2AB" href="https://refactoring.guru/design-patterns/decorator" target="_blank">Decorator</a> design pattern for weapons and upgrades. We can separate in the same way to run tests as well. Furthermore, it is better structured so that each class may manage its system independently of each other.</p>
+			<div id="m9as3F0ah5" class="La9vA3a1fV0"></div>
+			<p class="nA9aFzctAY ga9FA0GI3a">My Tool Creation - Input Display</p>
+			<p>The <strong>Input Displayer</strong> is one of the tools I made for this project. It will display an input icon based on the type of controller and input keys.</p>
+			<p>Keyboard users, for instance, will use WASD keyboard icons. Controller icons such as the D-Pad and Trigger Btn are used by controller users. This helps with the integration of HUD/UI for tutorial instruction, control maps, and other usage for programmers and designers users.</p>
+			<p>It functions by first creating a ScriptableObject and assigning an icon key sprite sheet as a variable. Data will then be generated automatically. There will be a listener button to manually set the key path and name based on incoming user input if any of them are generated incorrectly. The key icon will then be displayed in the ControlKey component depending on the active control.</p>
+		</div>
+	</div>
+	<div id="l821vxc09Fa"></div>
+	<button id="Nai39p1szF" class="lA0fAH7z bVa49A20a1FG" onclick="vLapgfim()">
+		<i class="fa fa-chevron-circle-up"></i> Scroll to Top
+	</button>
+	<div id="ma8FHao54AG"></div>
+	
+	<script src="scripts/general.js"></script>
+	<script src="datas/lilyparty.js"></script>
+	<script src="scripts/project.js"></script>
+</body>
+</html>
