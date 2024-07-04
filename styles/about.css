@@ -1,4 +1,4 @@
-﻿#about {
+﻿#lapa94KafgA {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -6,12 +6,12 @@
 	background-image: linear-gradient(black, rgb(18, 14, 25));
 }
 
-.title {
+.ga9FA0GI3a {
 	font-size: 30px;
 	text-wrap: nowrap;
 }
 
-#content {
+#jA904OapB23 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -22,10 +22,10 @@
 	
 	font-size: 20px;
 	
-	animation: fadeInTop 1s ease;
+	animation: t923PFNaga 1s ease;
 }
 
-#info {
+#z9rkALOA6 {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -34,13 +34,13 @@
 	gap: 5vw;
 }
 
-#info-profile {
+#nAC8KL4agu6 {
 	max-width: 300px;
 	max-height: 300px;
 	object-fit: contain;
 }
 
-#info-desc {
+#nmZ9FLaA09Fa {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -48,17 +48,17 @@
 	row-gap: 30px;
 }
 
-#info-link {
+#aA94LKp2AB {
 	display: flex;
 	flex-direction: row;
 	column-gap: 10px;
 }
 
-.content-section {
+.pa8fKAOL3avb14 {
 	width: 100%;
 }
 
-.skill-list, .work-exp-list {
+.nA7C3JapA21, .eFM9al43AGa {
 	display: flex;
 	flex-direction: row;
 	
@@ -67,51 +67,51 @@
 	column-gap: 25%;
 }
 
-.work-exp-list {
+.eFM9al43AGa {
 	justify-content: space-between;
 }
 
-#resume-btn {
+#qAF95K0azf {
 	padding: 15px 30px;
 	
 	font-weight: bold;
 	font-size: 20px;
 	
-	color: var(--highlight-color);
-	border: 2px solid var(--highlight-color);
+	color: var(--A8FUJMaov9z);
+	border: 2px solid var(--A8FUJMaov9z);
 	border-radius: 50px;
 	background-color: transparent;
 }
 
-#resume-btn:hover {
+#qAF95K0azf:hover {
 	color: black;
-	background-color: var(--highlight-color);
+	background-color: var(--A8FUJMaov9z);
 }
 
 @media (max-width: 768px) {
-	#info {
+	#z9rkALOA6 {
 		flex-direction: column;
 	}
 	
-	#content {
+	#jA904OapB23 {
 		width: 75%;
 	}
 	
-	.skill-list, .work-exp-list {
+	.nA7C3JapA21, .eFM9al43AGa {
 		flex-direction: column;
 	}
 	
-	#info-link {
+	#aA94LKp2AB {
 		justify-content: center;
 	}
 	
-	.title {
+	.ga9FA0GI3a {
 		text-align: center;
 	}
 }
 
-@media (max-width: 1000px) and (min-width: 768px){
-	#content {
+@media (max-width: 1100px) and (min-width: 768px){
+	#jA904OapB23 {
 		width: 700px;
 	}
 }

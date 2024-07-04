@@ -1,71 +1,73 @@
-const infoData = {
-	bgRef: 'images/mythicallove/mythicallove-bg.jpg',
-	name: 'MYTHICAL LOVE',
-	info: {
-		type: 'Personal Team of 12',
-		role: 'Gameplay / UI Programmer',
-		date: 'Oct 2022 - Aug 2023',
+const mA9Fap40AVaoz = {
+	pA9LFK4abA7: 'images/mythicallove/mythicallove-bg.jpg',
+	fvGnmAI33a: 'MYTHICAL LOVE',
+	kf98AKTfb: {
+		T54afbna: 'Personal Team of 12',
+		lb9AU3Ga: 'Gameplay / UI Programmer',
+		o8A4Oahnb: 'Oct 2022 - Aug 2023',
 	},
-	description: 'A dating simulation game where you played as one of monsters who joined the monster school for the first time, and try to live a normal student life while looking for potential monster to go for a date with.',
-	downloadLabel: 'DOWNLOAD',
-	downloadRef: 'https://niighty-nine.itch.io/mythical-love',
+	i8ASIDHN3: 'A dating simulation game where you played as one of monsters who joined the monster school for the first time, and try to live a normal student life while looking for potential monster to go for a date with.',
+	lA9JKfA0LGA: 'DOWNLOAD',
+	v9ALK43a9AJIK: 'https://niighty-nine.itch.io/mythical-love',
 }
 
-const colorData = {
-	firstColor: 'rgb(174, 82, 102)',
-	secondColor: 'rgb(110, 55, 126)',
+const nAL0llt4G = {
+	vnA8I4a0fnt: 'rgb(174, 82, 102)',
+	Na094AP09H: 'rgb(110, 55, 126)',
 }
 
-const galleryDatas = [{
-	id: 'gallery-gameplay',
-	index: 0,
-	gallery: [{
-		source: 'images/mythicallove/mythicallove-booth.jpg',
-		name: '404 Not Found Exhibition - Mythical Love',
-		description: 'Our game got attended at a game exhibition <a class="info-link" href="https://www.facebook.com/watch/?v=6384072628373169" target="_blank">&#39;404 Not Found&#39;</a> in Thailand',
+const mA8FUI4aphs = [{
+	id: 'J4b98FapVZ',
+	pA984OKbHGT: 0,
+	La9vA3a1fV0: [{
+		bv8ASKJG4: 'images/mythicallove/mythicallove-booth.jpg',
+		fvGnmAI33a: '404 Not Found Exhibition - Mythical Love',
+		i8ASIDHN3: 'Our game got attended at a game exhibition <a class="aA94LKp2AB" href="https://www.facebook.com/watch/?v=6384072628373169" target="_blank">&#39;404 Not Found&#39;</a> in Thailand',
 	}, {
-		source: 'images/mythicallove/mythicallove-screenshot-1.png',
-		name: 'Main Menu',
-		description: '',
+		bv8ASKJG4: 'images/mythicallove/mythicallove-screenshot-1.png',
+		fvGnmAI33a: 'Main Menu',
+		i8ASIDHN3: '',
 	}, {
-		source: 'images/mythicallove/mythicallove-screenshot-2.png',
-		name: 'Gallery Screen',
-		description: '',
+		bv8ASKJG4: 'images/mythicallove/mythicallove-screenshot-2.png',
+		fvGnmAI33a: 'Gallery Screen',
+		i8ASIDHN3: '',
 	}, {
-		source: 'images/mythicallove/mythicallove-screenshot-3.png',
-		name: 'Gallery | Character Inspection',
-		description: '',
+		bv8ASKJG4: 'images/mythicallove/mythicallove-screenshot-3.png',
+		fvGnmAI33a: 'Gallery | Character Inspection',
+		i8ASIDHN3: '',
 	}, {
-		source: 'images/mythicallove/mythicallove-screenshot-4.png',
-		name: 'School Map',
-		description: '',
+		bv8ASKJG4: 'images/mythicallove/mythicallove-screenshot-4.png',
+		fvGnmAI33a: 'School Map',
+		i8ASIDHN3: '',
 	}, {
-		source: 'images/mythicallove/mythicallove-screenshot-5.png',
-		name: 'Dialogue & Story Telling',
-		description: '',
+		bv8ASKJG4: 'images/mythicallove/mythicallove-screenshot-5.png',
+		fvGnmAI33a: 'Dialogue & Story Telling',
+		i8ASIDHN3: '',
 	}, {
-		source: 'images/mythicallove/mythicallove-screenshot-6.png',
-		name: 'Kitsune Item Shop',
-		description: '',
+		bv8ASKJG4: 'images/mythicallove/mythicallove-screenshot-6.png',
+		fvGnmAI33a: 'Kitsune Item Shop',
+		i8ASIDHN3: '',
 	}, {
-		source: 'images/mythicallove/mythicallove-screenshot-7.png',
-		name: 'Graeae Mystery Club',
-		description: '',
+		bv8ASKJG4: 'images/mythicallove/mythicallove-screenshot-7.png',
+		fvGnmAI33a: 'Graeae Mystery Club',
+		i8ASIDHN3: '',
 	}, {
-		source: 'images/mythicallove/mythicallove-screenshot-8.png',
-		name: 'Room Decoration (Minigame)',
-		description: '',
+		bv8ASKJG4: 'images/mythicallove/mythicallove-screenshot-8.png',
+		fvGnmAI33a: 'Room Decoration (Minigame)',
+		i8ASIDHN3: '',
 	}],
 }, {
-	id: 'gallery-script',
-	index: 0,
-	gallery: [{
-		source: 'images/mythicallove/mythicallove-audio.png',
-		name: 'Audio System',
-		description: 'This will contain options for different audio files that can control audio settings without any external program/application.',
+	id: 'm9as3F0ah5',
+	pA984OKbHGT: 0,
+	La9vA3a1fV0: [{
+		bv8ASKJG4: 'images/mythicallove/mythicallove-audio.png',
+		fvGnmAI33a: 'Audio System',
+		i8ASIDHN3: 'This will contain options for different audio files that can control audio settings without any external program/application.',
 	}, {
-		source: 'images/mythicallove/mythicallove-gallerym.png',
-		name: 'Gallery Generator System',
-		description: 'This will auto-generate gallery objects with images and thumbnails.',
+		bv8ASKJG4: 'images/mythicallove/mythicallove-gallerym.png',
+		fvGnmAI33a: 'Gallery Generator System',
+		i8ASIDHN3: 'This will auto-generate gallery objects with images and thumbnails.',
 	}],
 }];
+
+const lA9POagjA4 = []
