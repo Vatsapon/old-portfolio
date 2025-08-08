@@ -17,4 +17,4 @@ This is my old portfolio website which created using only HTML, CSS, JS as Stati
 - (Other HTML files) - Page for each project.
 
 ## 📌 Notes
-- The information here is outdated since it's not being maintained anymore. Here's the [link](https://vatsapon.gitlab.io/portfolio/) to new portfolio website.
+- The information here is outdated since it's not being maintain anymore. Here's the [link](https://vatsapon.gitlab.io/portfolio/) to new portfolio website.
